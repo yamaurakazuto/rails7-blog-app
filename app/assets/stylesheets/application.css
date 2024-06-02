@@ -4,12 +4,38 @@ body {
   margin: 0;
   padding: 0;
 }
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.form-input {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-input input,
+.form-input textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
 
 h1 {
   text-align: center;
   color: #1da1f2;
   margin: 20px 0;
 }
+
 
 .button-container {
   text-align: center;
@@ -24,6 +50,7 @@ h1 {
   text-decoration: none;
   font-weight: bold;
 }
+
 
 .link-button:hover {
   background-color: #0d95e8;
@@ -81,6 +108,139 @@ small {
 .link-delete-button:hover {
   background-color: #c21a4d;
 }
+
+
+/* コンテナ全体を中央揃えにする */
+.container.home-sections {
+  height: 100vh; /* 高さを100%に設定して垂直方向の中央揃えを可能にする */
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+}
+
+.cmmnent-content {
+  text-align: center;
+  color: black;
+  margin: 20px 0;
+}
+
+
+/* カード内のテキストとボタンを中央揃えにする */
+.card.text-center {
+  display: flex;
+  flex-direction: column; /* 垂直方向にアイテムを配置 */
+  align-items: center; /* 垂直方向の中央揃え */
+}
+
+.edit-delete-wrapper {
+  margin-top: 10px;
+}
+
+.link-sbutton {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #1da1f2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-sbutton:hover {
+  background-color: #0d95e8;
+}
+
+.fs-6 {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* コメントリストのスタイル */
+
+
+.comment-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.comment-content {
+  font-size: 16px;
+  margin: 0 0 5px 0; /* 下に少しマージンを設定 */
+}
+
+.comment-date {
+  font-size: 12px;
+  color: #888;
+  display: block; /* 日付をブロック表示にして改行 */
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.delete-button:hover {
+  background-color: #cc0000;
+}
+
+.comments-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-item {
+  background-color: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1da1f2;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.actions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.title {
+  text-align: center;
+  color: #1da1f2;
+  margin: 20px 0;
+
+}
+
+
+
+
+
 
 
 

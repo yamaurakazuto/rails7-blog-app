@@ -1,29 +1,29 @@
 <h1><%= @post.title %></h1>
-<p><%= @post.content %></p>
+<p class="cmmnent-content"><%= @post.content %></p>
 
-<h2>Comments</h2>
-<ul>
+<ul class="comments-list">
   <% @post.comments.each do |comment| %>
-    <li>
-      <p><%= comment.content %></p>
-      <span><small><%= comment.created_at %></small></span>
-      <%= button_to '削除', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <li class="comment-item">
+      <p class="comment-content"><%= comment.content %></p>
+      <span class="comment-date"><small><%= comment.created_at %></small></span>
+      <%= button_to '削除', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
     </li>
   <% end %>
 </ul>
 
-<h3>Add a comment:</h3>
-<%= form_with(model: [@post, @post.comments.build], local: true) do |form| %>
-  <div class="field">
+
+<%= form_with(model: [@post, @post.comments.build], local: true, html: { class: 'form-container' }) do |form| %>
+  <div class="form-input">
     <%= form.label :content %>
     <%= form.text_area :content %>
   </div>
-  <div class="actions">
-    <%= form.submit 'Create Comment' %>
+  <div class="button-container">
+    <%= form.submit 'Create Comment', class: 'link-button' %>
   </div>
 <% end %>
 
 <div class="button-container">
   <%= link_to 'Back to Posts', posts_path, class: 'link-button' %>
 </div>
+
 
