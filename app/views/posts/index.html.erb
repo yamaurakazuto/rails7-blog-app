@@ -1,4 +1,10 @@
-<h1>Rails 掲示板</h1>
+<h1>Rails blog</h1>
+<div class="container">
+  <div class="d-flex justify-content-end">
+    <% if user_signed_in? %>
+      <%= button_to "サインアウト", destroy_user_session_path, method: :delete, class: "btn btn-secondary" %>
+    <% end %>
+  </div>
 
 <div class="button-container">
   <%= link_to "新しい投稿", new_post_path, class: "link-button" %>
